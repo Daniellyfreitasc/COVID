@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import Fundocovid from "../elements/imgs/fundocovid.jpg";
 
 export const DivInput = styled.div`
   width: 90%;
@@ -23,23 +24,6 @@ export const Paragrafo = styled.p`
     padding: 2%;
 	}
 `
-export const ButtonComeBack = styled.button`
-	position: absolute;
-	top: 0;
-	left: 45%;
-	margin: 0.4% 0;
-	color: white;
-	font-weight: bolder;
-	background-color: transparent;
-	border: none;
-	cursor: pointer;
-	width: 180px;
-	height: 25px;
-	:hover {
-		transition: 0.5s;
-		font-size: 16px;
-	}
-`;
 
 export const Selects = styled.select`
     margin: 2% 0;
@@ -90,3 +74,4 @@ export const DivInfo = styled.div`
 export const DadosP = styled.h2`
   margin: 0 10%;
 `
+

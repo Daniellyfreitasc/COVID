@@ -1,8 +1,8 @@
 import React from "react";
-import Rotas from "./elements/routes/routes";
+import Home from "../src/home/home";
 
 function App() {
-  return <Rotas/>
+  return <Home/>
 }
 
 export default App;

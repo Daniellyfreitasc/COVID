@@ -1,12 +1,12 @@
 import React, { memo, useEffect, useState } from 'react';
 import { ComposableMap, Geographies, Geography} from 'react-simple-maps';
 import axios from 'axios';
-import { SUPABASE_ANON_KEY, SUPABASE_URL } from '../elements/APIkey';
 import { Button, DadosP, DateDados, DivInfo, DivInput, Options, Paragrafo, Selects } from './homestyle';
 const _ = require("lodash"); 
 
 const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
-
+const SUPABASE_URL = 'https:COVID.supabase.co/rest/v1';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvemRtZXVheGZ6dmlocXhzYm1lIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTA2NDU5NTksImV4cCI6MTk2NjIyMTk1OX0.A45M7zjbvkFKeMLu_tqG1OT9KmoybNe9CN_mgXINxx4';
 
 
 function Home({ setTooltipContent }) {
@@ -155,6 +155,7 @@ function Home({ setTooltipContent }) {
     </ComposableMap>
     </div>
   </>
+  
 );
 };
 export default memo(Home);
