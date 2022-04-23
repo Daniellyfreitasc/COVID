@@ -1,5 +1,5 @@
 import styled from "styled-components";
-import Fundocovid from "../elements/imgs/fundocovid.jpg";
+
 
 export const DivInput = styled.div`
   width: 90%;
@@ -27,8 +27,8 @@ export const Paragrafo = styled.p`
 
 export const Selects = styled.select`
     margin: 2% 0;
-    background-color: #ffffff;
-    border: none;
+    background-color: #92a8d1;
+    border: #000000 solid 2px;
     padding: 12px 22px;
     font-size: 16px;
     border-radius: 10px;
@@ -42,13 +42,13 @@ export const Options = styled.option`
   color: black;
 `
 export const Button = styled.button`
-    background-color: transparent;
+    background-color: #92a8d1;
     padding: 10px 22px;
     font-size: 22px;
     border-radius: 25px;
     width: 250px;
     margin-left: 5%;
-    color: #ffffff;
+    color: #92a8d1;
     border: #1b89ae solid 2px;
     font-weight: 900;
     &:hover{
@@ -59,7 +59,7 @@ export const Button = styled.button`
     }
     &:disabled {
       color: black;
-      background-color: transparent;
+      background-color: #92a8d1;
       border: black solid 2px;
     }
     @media (max-width: 700px) {

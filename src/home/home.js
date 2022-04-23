@@ -6,7 +6,7 @@ const _ = require("lodash");
 
 const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
 const SUPABASE_URL = 'https:COVID.supabase.co/rest/v1';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InRvemRtZXVheGZ6dmlocXhzYm1lIiwicm9sZSI6ImFub24iLCJpYXQiOjE2NTA2NDU5NTksImV4cCI6MTk2NjIyMTk1OX0.A45M7zjbvkFKeMLu_tqG1OT9KmoybNe9CN_mgXINxx4';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN6ZHRxZWh3ZGh6aGRpbW5heXZhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY1MDYzNjQ1NSwiZXhwIjoxOTY2MjEyNDU1fQ.DvhArS4vp2n9heAi7k6edzMKSISze_DNlCNAOkKLPig';
 
 
 function Home({ setTooltipContent }) {
@@ -34,7 +34,14 @@ function Home({ setTooltipContent }) {
       console.log(err.response);
     })
 	};
-
+  /*  fetch()
+fetch('https://api.github.com/orgs/axios')
+.then(response => response.json())    // passo extra
+.then(data => {
+  console.log(data)
+})
+.catch(error => console.error(error));
+ */
 	function getTotalCases(coutryName) {
 		const covidDataTemp = infoCase.filter((coutry) => coutry.location === coutryName);
     const dadosFiltrados = _.uniq(covidDataTemp)
@@ -157,5 +164,6 @@ function Home({ setTooltipContent }) {
   </>
   
 );
+
 };
 export default memo(Home);
