@@ -19,7 +19,7 @@ function Home({ setTooltipContent }) {
   const onChange = (e) => {
     setNameVariant(e.target.value)
   }
-  function dateSlectValue(value) {
+  function dateSelectedValue(value) {
     setDateValue(value)
     setDateSelect(date[value - 1])
   }
@@ -116,7 +116,7 @@ fetch('https://api.github.com/orgs/axios')
         min='1'
         max='9'
         value={dateValue}
-        onChange={(e) => dateSlectValue(Number(e.target.value))}
+        onChange={(e) => dateSelectedValue(Number(e.target.value))}
         type="range"
       />
       </DivInput>
@@ -152,7 +152,7 @@ fetch('https://api.github.com/orgs/axios')
 
               style={{hover: {
                 fill: "#1B89AE",
-                outline: "none"
+                outline: "none",
               }}}
             />
           )})
@@ -161,8 +161,6 @@ fetch('https://api.github.com/orgs/axios')
     </ComposableMap>
     </div>
   </>
-  
 );
-
 };
 export default memo(Home); 
