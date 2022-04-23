@@ -1,12 +1,11 @@
 import React, { memo, useEffect, useState } from 'react';
 import { ComposableMap, Geographies, Geography} from 'react-simple-maps';
 import axios from 'axios';
+import {SUPABASE_ANON_KEY, SUPABASE_URL} from '../elements/urls';
 import { Button, DadosP, DateDados, DivInfo, DivInput, Options, Paragrafo, Selects } from './homestyle';
 const _ = require("lodash"); 
 
 const geoUrl = 'https://raw.githubusercontent.com/zcreativelabs/react-simple-maps/master/topojson-maps/world-110m.json';
-const SUPABASE_URL = 'https:COVID.supabase.co/rest/v1';
-const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImN6ZHRxZWh3ZGh6aGRpbW5heXZhIiwicm9sZSI6InNlcnZpY2Vfcm9sZSIsImlhdCI6MTY1MDYzNjQ1NSwiZXhwIjoxOTY2MjEyNDU1fQ.DvhArS4vp2n9heAi7k6edzMKSISze_DNlCNAOkKLPig';
 
 
 function Home({ setTooltipContent }) {
@@ -67,7 +66,7 @@ fetch('https://api.github.com/orgs/axios')
           setTimeout(function(){
             setDateSelect(arr[x]);
             setDateValue(x)
-           }, x * 1000); // 1000 = 1 segundo
+           }, x * 1000); 
         }(x));
      }
   }
@@ -98,7 +97,7 @@ fetch('https://api.github.com/orgs/axios')
         })}
       </Selects>
 
-      <Button disabled={habilitButton} onClick={() => onClickMap()}> ▶ Play Covid</Button>
+      <Button disabled={habilitButton} onClick={() => onClickMap()}> ▶ Play </Button>
 
     </div>
 
@@ -166,4 +165,4 @@ fetch('https://api.github.com/orgs/axios')
 );
 
 };
-export default memo(Home);
+export default memo(Home); 

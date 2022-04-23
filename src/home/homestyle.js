@@ -48,12 +48,12 @@ export const Button = styled.button`
     border-radius: 25px;
     width: 250px;
     margin-left: 5%;
-    color: #92a8d1;
-    border: #1b89ae solid 2px;
+    color: #000000;
+    border: black solid 2px;
     font-weight: 900;
     &:hover{
         cursor: pointer;
-        background-color:  #ffffff;
+        background-color:  #92a8d1;
         color: #0f334c;
         transition: 0.3s;
     }
